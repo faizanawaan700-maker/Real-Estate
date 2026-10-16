@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0907">
+<meta name="description" content="Bukhsh Estate &amp; Marketing, Lahore. Buy, sell, rent and invest in DHA and prime locations.">
+<meta property="og:title" content="Bukhsh Estate &amp; Marketing">
+<meta property="og:description" content="Property buying, selling, renting and investment in Lahore.">
+<meta property="og:image" content="assets/poster.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0907'/%3E%3Cpath d='M11 26V10l5-4 5 4v16z' fill='%23d9ad54'/%3E%3C/svg%3E">
+<title>Bukhsh Estate &amp; Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Three scroll-driven scenes: hero video that pulls back, a tower that separates into six levels, and cards that drift at their own speeds. */
+:root {
+  color-scheme: dark;
+  --night: #0b0907;
+  --ember: #d9ad54;
+  --sand: #f1e4c8;
+  --slate: #b3a88f;
+  --line: #33291a;
+  --display: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  --gold: linear-gradient(100deg, #9a7430 0%, #f3d58a 38%, #c9a24a 62%, #f0cf80 100%);
+  --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; }
+body { margin: 0; background: var(--night); color: var(--sand); font-family: var(--body); font-size: 16px; line-height: 1.65; overflow-x: hidden; }
+a { color: inherit; }
+
+.top { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 20px 28px; background: linear-gradient(180deg, rgba(11,9,7,.85), rgba(11,9,7,0)); }
+.brand { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 600; letter-spacing: .28em; font-size: .82rem; text-transform: uppercase; }
+.top a.pill { -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); border-color: rgba(217,173,84,.55) !important; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; padding: 10px 18px; border: 1px solid rgba(241,228,200,.4); border-radius: 999px; background: rgba(11,9,7,.55); transition: background .2s, color .2s; }
+.top a.pill:hover, .top a.pill:focus-visible { background: var(--ember); color: #1a1306; outline: none; }
+#bar { position: absolute; left: 0; top: 0; height: 2px; width: 0; background: var(--ember); }
+
+.mark { width: 40px; height: 40px; border-radius: 8px; border: 1px solid rgba(217,173,84,.45); display: block; }
+.logo-lg { width: 128px; height: 128px; border-radius: 16px; border: 1px solid rgba(217,173,84,.55); box-shadow: 0 0 0 8px rgba(217,173,84,.06), 0 0 70px rgba(217,173,84,.28); margin: 0 auto 22px; display: block; }
+.urdu { font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; line-height: 2.1; color: var(--ember); font-size: 1.15rem; margin: 0; text-align: left; }
+
+.promise { max-width: 1120px; margin-inline: auto; padding: 70px 20px 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+.promise > div { padding: 34px 28px 34px 0; min-width: 0; }
+.promise > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+.promise .urdu { font-size: 1.6rem; }
+.promise h3 { font-family: var(--display); font-weight: 500; font-size: 1.9rem; margin: 4px 0 10px; }
+.promise p.d { margin: 0; color: var(--slate); max-width: 34ch; }
+@media (max-width: 700px) { .promise > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 30; background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(0,0,0,.38) 100%); }
+.scene { position: relative; }
+.nav { display: flex; gap: 22px; }
+.nav a { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; color: var(--sand); opacity: .85; }
+.nav a:hover, .nav a:focus-visible { color: var(--ember); opacity: 1; outline: none; }
+@media (max-width: 860px) { .nav { display: none; } }
+.listings { max-width: 1120px; margin: 0 auto; padding: 90px 20px 40px; }
+.listings .kick { font: 600 .72rem var(--body); letter-spacing: .24em; text-transform: uppercase; color: var(--ember); margin: 0; }
+.listings h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.1rem, 5vw, 3.6rem); margin: 8px 0 10px; }
+.listings h2 em { font-style: italic; background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.listings .d { color: var(--slate); max-width: 62ch; margin: 0; }
+.lfilter { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 30px 0 14px; }
+.lfilter label { display: grid; gap: 6px; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--slate); }
+.lfilter select { font: 500 .95rem var(--body); letter-spacing: 0; text-transform: none; color: var(--sand); background: #14100a; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; min-height: 46px; }
+.lfilter select:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+.lcount { color: var(--slate); font-size: .85rem; margin: 0 0 18px; }
+.lgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.lcard { all: unset; box-sizing: border-box; display: block; cursor: pointer; border: 1px solid rgba(217,173,84,.28); background: linear-gradient(170deg, #1d170c, #100d08); transition: transform .25s, border-color .25s; }
+.lcard:hover, .lcard:focus-visible { transform: translateY(-4px); border-color: var(--ember); }
+.lcard:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+.lpic { display: block; height: 180px; background: #14100a center / cover no-repeat; }
+.lbody { display: block; padding: 20px; }
+.ltag { display: block; font-size: .66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ember); margin-bottom: 8px; }
+.lbody strong { display: block; font-family: var(--display); font-weight: 500; font-size: 1.35rem; line-height: 1.2; color: var(--sand); }
+.lmeta { display: block; color: var(--slate); font-size: .9rem; margin-top: 6px; }
+.lprice { display: block; margin-top: 14px; color: var(--sand); font-weight: 600; }
+.lempty { color: var(--slate); margin: 24px 0 0; }
+.lempty[hidden] { display: none; }
+.lempty a { color: var(--ember); }
+.ldlg { width: min(560px, calc(100vw - 32px)); background: #14100a; color: var(--sand); border: 1px solid rgba(217,173,84,.4); border-radius: 16px; padding: 24px; }
+.ldlg::backdrop { background: rgba(0,0,0,.7); }
+.ldlg .lx { position: absolute; right: 14px; top: 14px; width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--line); background: rgba(11,9,7,.85); color: var(--sand); font-size: 1.3rem; cursor: pointer; }
+.ldimg { height: 220px; border-radius: 10px; background: #0b0907 center / cover no-repeat; margin-bottom: 18px; }
+.ldlg h3 { font-family: var(--display); font-weight: 500; font-size: 1.8rem; margin: 0 0 12px; }
+.ldfacts { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; margin: 0 0 14px; }
+.ldfacts dt { color: var(--slate); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+.ldfacts dd { margin: 0; }
+.ldnote { color: var(--slate); font-size: .85rem; margin: 0 0 18px; }
+.model { max-width: 1120px; margin: 0 auto; padding: 70px 20px 10px; text-align: center; }
+.model .kick { font: 600 .72rem var(--body); letter-spacing: .24em; text-transform: uppercase; color: var(--ember); margin: 0; }
+.model h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2rem, 5vw, 3rem); margin: 8px 0 10px; }
+.model h2 em { font-style: italic; background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.model .d { color: var(--slate); margin: 0 auto; max-width: 54ch; font-size: .95rem; }
+.model-stage { position: relative; height: min(68vh, 560px); min-height: 360px; margin-top: 26px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: radial-gradient(70% 60% at 50% 38%, #2a2112 0%, var(--night) 72%); cursor: grab; touch-action: pan-y; }
+.model-stage:active { cursor: grabbing; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.model-fb { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; color: var(--slate); letter-spacing: .2em; text-transform: uppercase; font-size: .72rem; padding: 20px; }
+.model.no3d .model-fb { display: flex; }
+.model.no3d #gl { display: none; }
+.model-cap { margin: 14px 0 0; font-size: .78rem; color: var(--slate); letter-spacing: .08em; }
+@media (max-width: 480px) { .model-stage { min-height: 320px; } }
+.pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+#hero { height: 200vh; height: 200svh; }
+#levels { height: 560vh; height: 560svh; }
+
+/* ---------- Scene 1: hero video ---------- */
+.veil { position: absolute; inset: 0; background: var(--night); opacity: 0; pointer-events: none; }
+.hvid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; will-change: transform; background: #0b0907; }
+.shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, rgba(6,5,3,.84) 0%, rgba(6,5,3,.52) 45%, rgba(6,5,3,.44) 100%); }
+
+.copy { position: absolute; left: 0; right: 0; bottom: 14%; padding-inline: 20px; max-width: 1120px; margin-inline: auto; will-change: transform, opacity; }
+.copy2 { top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; opacity: 0; }
+.eyebrow::before { content: ""; display: inline-block; width: 38px; height: 1px; background: var(--ember); vertical-align: middle; margin-right: 14px; }
+.eyebrow { font-size: .74rem; letter-spacing: .32em; text-transform: uppercase; color: var(--sand); opacity: .85; margin: 0 0 20px; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.04; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.7rem, 8.4vw, 6.8rem); letter-spacing: -.01em; max-width: 12ch; }
+h1 b, .nums b, .end h2 em { font-weight: 600; font-style: italic; background: var(--gold); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.copy2 h2 { font-size: clamp(2.1rem, 5.8vw, 4.7rem); max-width: 16ch; }
+.copy2 p { max-width: 40ch; margin: 22px 0 0; color: var(--sand); opacity: .9; }
+.cue { position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%); display: grid; justify-items: center; gap: 8px; font-size: .68rem; letter-spacing: .3em; text-transform: uppercase; color: var(--sand); }
+.cue i { width: 1px; height: 38px; background: linear-gradient(var(--sand), transparent); animation: drip 1.8s ease-in-out infinite; transform-origin: top; }
+@keyframes drip { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+
+/* ---------- Scene 2: tower of levels ---------- */
+#levels .pin { background: radial-gradient(60% 55% at 62% 50%, #2a2110 0%, var(--night) 70%); }
+.stage { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+.info { align-self: center; position: relative; z-index: 2; min-width: 0; padding-top: 40px; }
+.info .eyebrow { color: var(--ember); opacity: 1; }
+.info-body { min-height: 16.5rem; }
+.info h2 { font-size: clamp(2rem, 4.2vw, 3.5rem); margin-bottom: 18px; }
+.info p { margin: 0; color: var(--slate); max-width: 38ch; }
+.ticks { display: flex; gap: 8px; margin-top: 26px; }
+.ticks i { width: 26px; height: 4px; border-radius: 2px; background: var(--line); transition: background .25s, width .25s; }
+.ticks i.on { background: var(--ember); width: 44px; }
+.view { position: relative; perspective: 1900px; min-width: 0; }
+.rig { position: absolute; left: 50%; top: 50%; width: 240px; height: 240px; margin: -120px 0 0 -120px; transform-style: preserve-3d; will-change: transform; }
+.floor { position: absolute; left: 0; top: 0; width: 240px; height: 240px; transform-style: preserve-3d; will-change: transform; }
+.roof { position: absolute; left: 0; top: 0; width: 240px; height: 240px; transform-style: preserve-3d; pointer-events: none; }
+
+/* Every object is a box: a top face plus four sides, placed in the floor's own plane with --x --y --z --w --d --h. */
+.bx { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: var(--d); transform-style: preserve-3d; transform: translateZ(var(--z)); }
+.bx i { position: absolute; background: var(--bc); }
+.bx .t { left: 0; top: 0; width: var(--w); height: var(--d); transform: translateZ(var(--h)); background-image: linear-gradient(135deg, rgba(255,255,255,.2), rgba(0,0,0,.1)); }
+.bx .f { left: 0; top: var(--d); width: var(--w); height: var(--h); transform-origin: 50% 0; transform: translateZ(var(--h)) rotateX(-90deg); background-image: linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,.16)); }
+.bx .l { left: 0; top: 0; width: var(--h); height: var(--d); transform-origin: 0 50%; transform: translateZ(var(--h)) rotateY(90deg); background-image: linear-gradient(rgba(0,0,0,.36), rgba(0,0,0,.36)); }
+
+/* Floor finishes */
+.bx.m-wood .t { background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(0,0,0,.14)), repeating-linear-gradient(90deg, #b88a5c 0 16px, #9c6f45 16px 17px, #c29769 17px 33px, #9c6f45 33px 34px); }
+.bx.m-marble .t { background: linear-gradient(135deg, rgba(255,255,255,.2), rgba(0,0,0,.12)), repeating-linear-gradient(62deg, transparent 0 46px, rgba(110,90,50,.14) 46px 47px), linear-gradient(120deg, #ece8e0, #d6d0c4 45%, #f2efe9 70%, #cfc8bb); }
+.bx.m-stone .t { background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(0,0,0,.16)), repeating-linear-gradient(0deg, transparent 0 39px, rgba(0,0,0,.2) 39px 40px), repeating-linear-gradient(90deg, transparent 0 39px, rgba(0,0,0,.2) 39px 40px), linear-gradient(#a39a88, #8a8272); }
+.bx.m-dark .t { background: linear-gradient(135deg, rgba(255,255,255,.1), rgba(0,0,0,.25)), repeating-linear-gradient(90deg, #2b251b 0 22px, #201a12 22px 44px); }
+.bx.deck .t { background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(0,0,0,.14)), repeating-linear-gradient(0deg, #a57a50 0 12px, #7d5a39 12px 13px); }
+
+/* Glass walls with mullions */
+.bx.glass i { background: linear-gradient(115deg, rgba(200,235,255,.32), rgba(120,170,215,.12) 50%, rgba(255,255,255,.28)), repeating-linear-gradient(90deg, rgba(255,255,255,.55) 0 1px, transparent 1px 30px); }
+.bx.glass .l { background: linear-gradient(115deg, rgba(200,235,255,.28), rgba(120,170,215,.1) 50%, rgba(255,255,255,.24)), repeating-linear-gradient(0deg, rgba(255,255,255,.55) 0 1px, transparent 1px 30px); }
+.bx.glass .t { background: rgba(240,248,255,.75); }
+.bx.glass.skylight .t { background: rgba(200,230,245,.14); }
+
+/* Special surfaces */
+.bx.pool .t { background: linear-gradient(120deg, rgba(255,255,255,.45), transparent 45%), linear-gradient(135deg, #6fe2f2, #2aa9cf 55%, #1b7fb0); box-shadow: inset 0 0 0 4px rgba(240,246,250,.95); }
+.bx.pool.lanes .t { background: repeating-linear-gradient(0deg, transparent 0 13px, rgba(255,255,255,.5) 13px 14px), linear-gradient(120deg, rgba(255,255,255,.4), transparent 45%), linear-gradient(135deg, #6fe2f2, #2aa9cf 55%, #1b7fb0); }
+.bx.screen .f { background: linear-gradient(135deg, #2a241a, #4a3c22 60%, #b98a35); }
+.bx.seats .t { background: repeating-linear-gradient(90deg, #a03549 0 30px, #5e1c2a 30px 34px); }
+.bx.copper i { background: #d9ad54; }
+.bx.copper .t { background: linear-gradient(135deg, #ffd0a8, #d9ad54 60%, #c4663a); }
+
+/* The level in view lights up */
+.bx.slab .t::after { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,0); transition: background .3s; }
+.floor.on .bx.slab .t::after { background: rgba(255,255,255,.3); }
+.floor.on .bx.slab .t { box-shadow: inset 0 0 0 4px rgba(255,255,255,.85); }
+
+/* ---------- Numbers ---------- */
+.band { padding: 120px 20px 40px; max-width: 1120px; margin-inline: auto; }
+.band h2 { font-size: clamp(2.1rem, 5.2vw, 3.9rem); max-width: 18ch; margin-bottom: 56px; }
+.nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); border-top: 1px solid var(--line); }
+.nums div { padding: 30px 20px 30px 0; min-width: 0; }
+.nums b { display: block; font-family: var(--display); font-size: clamp(2.8rem, 6vw, 4.4rem); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.nums span { color: var(--slate); font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; }
+
+/* ---------- Scene 3: drifting cards ---------- */
+.drift { padding: 80px 20px 140px; max-width: 1120px; margin-inline: auto; }
+.drift .sec { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 70px; }
+.drift h2 { font-size: clamp(2.1rem, 5.2vw, 3.9rem); max-width: 14ch; }
+.drift .sec p { color: var(--slate); max-width: 36ch; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; align-items: start; }
+.tile { min-width: 0; border: 1px solid rgba(217,173,84,.28); background: linear-gradient(170deg, #1d170c, #100d08); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(243,213,138,.12); padding: 26px; will-change: transform; }
+.tile .pic { height: 190px; margin-bottom: 22px; background-color: #14100a; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.tile .pic::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 55%; background: linear-gradient(0deg, rgba(11,9,7,.8), transparent); }
+.tile h3 { font-family: var(--display); font-weight: 500; font-size: 1.5rem; margin: 0 0 8px; }
+.tile .k { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ember); margin: 0 0 12px; }
+.tile p.d { margin: 0; color: var(--slate); font-size: .94rem; }
+
+.end { text-align: center; padding: 120px 20px 100px; border-top: 1px solid var(--line); background: radial-gradient(50% 80% at 50% 100%, rgba(217,173,84,.22), transparent 70%); }
+.end h2 { font-size: clamp(2.2rem, 5.8vw, 4.4rem); max-width: 16ch; margin: 0 auto 28px; }
+.btn { display: inline-block; padding: 18px 40px; font: 600 .78rem var(--body); letter-spacing: .22em; text-transform: uppercase; text-decoration: none; color: #1a1306; background: var(--gold); background-size: 200% 100%; border-radius: 999px; transition: transform .25s, box-shadow .25s; }
+.btn:hover, .btn:focus-visible { background-position: 100% 0; transform: translateY(-3px); box-shadow: 0 14px 44px rgba(217,173,84,.45); outline: none; }
+.end small { display: block; margin-top: 40px; color: var(--slate); letter-spacing: .14em; text-transform: uppercase; font-size: .7rem; }
+
+@media (max-width: 480px) { .brand { letter-spacing: .12em; font-size: .7rem; gap: 9px; } .top a.pill { padding: 9px 14px; letter-spacing: .12em; } }
+@media (max-width: 860px) {
+  .stage { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; }
+  .view { order: 1; min-height: 0; }
+  .info { order: 2; padding: 0 0 34px; }
+  .info-body { min-height: 9.5rem; }
+  .info h2 { font-size: 1.8rem; margin-bottom: 8px; }
+  .info p { font-size: .92rem; }
+  .eyebrow { letter-spacing: .2em; }
+  .ticks { margin-top: 14px; }
+  .copy { bottom: 16%; }
+}
+.calm #hero, .calm #levels { height: auto; }
+.calm .pin { position: relative; min-height: 100vh; min-height: 100svh; }
+@media (prefers-reduced-motion: reduce) { .cue i { animation: none; } .btn, .top a.pill { transition: none; } }
+</style>
+
+</head>
+<body>
+<header class="top">
+  <span class="brand"><img class="mark" src="assets/bukhsh_logo.jpg" alt="" width="40" height="40">Bukhsh Estate &amp; Marketing</span>
+  <nav class="nav" aria-label="Main"><a href="#listings" data-purpose="any">Properties</a><a href="#listings" data-purpose="Sale">Buy</a><a href="#listings" data-purpose="Rent">Rent</a><a href="#about">About</a><a href="#visit">Contact</a></nav>
+  <a class="pill" href="https://wa.me/923008497062?text=Assalam%20o%20Alaikum%2C%20Bukhsh%20Estate%20%26%20Marketing%2C%20mujhe%20DHA%20Lahore%20property%20ke%20baare%20mein%20baat%20karni%20hai.">WhatsApp</a>
+  <div id="bar"></div>
+</header>
+
+<main>
+  <div class="scene" id="hero">
+    <div class="pin">
+      <video class="hvid" id="hvid" autoplay muted loop playsinline preload="auto" disablepictureinpicture tabindex="-1" aria-hidden="true" poster="assets/poster.jpg" src="assets/hero.mp4"></video>
+      <div class="shade"></div>
+      <div class="copy" data-r="c1">
+        <p class="eyebrow">DHA registered dealer · Phase 4, Lahore</p>
+        <p lang="en-GB" style="font-family:var(--display);font-style:italic;font-size:1.6rem;line-height:1.4;color:var(--ember);margin:0 0 10px">Your trust, our responsibility.</p>
+        <h1>Trusted <b>property</b> in DHA Lahore.</h1>
+      </div>
+      <div class="copy copy2" data-r="c2">
+        <h2>Delivering excellence in real estate.</h2>
+        <p>Keep scrolling and see how we can help, one service at a time.</p>
+      </div>
+      <div class="cue" data-r="cue"><span>Scroll</span><i></i></div>
+      <div class="veil" data-r="veil"></div>
+    </div>
+  </div>
+
+  <section class="listings" id="listings" aria-labelledby="lh">
+    <p class="kick">Listings</p>
+    <h2 id="lh">Find your <em>property.</em></h2>
+    <p class="d">Buy, sell or rent in DHA Phase 4 and prime Lahore. The cards below are sample layouts. Live listings with photos, price, area and phase will replace them.</p>
+    <form id="lfilter" class="lfilter" aria-label="Filter properties">
+      <label>Purpose <select name="purpose"><option value="any">Buy or rent</option><option value="Sale">Buy</option><option value="Rent">Rent</option></select></label>
+      <label>Type <select name="type"><option value="any">Any type</option><option value="House">House</option><option value="Residential plot">Residential plot</option><option value="Commercial plot">Commercial plot</option><option value="Building">Building</option></select></label>
+      <label>Size <select name="area"><option value="any">Any size</option><option value="5 Marla">5 Marla</option><option value="10 Marla">10 Marla</option><option value="1 Kanal">1 Kanal</option><option value="3 Bed">3 Bed</option></select></label>
+      <label>Phase <select name="phase"><option value="any">Any phase</option><option value="Phase 4">Phase 4</option><option value="Phase 6">Phase 6</option><option value="Phase 10">Phase 10</option></select></label>
+      <label>Budget <select name="budget"><option value="any">Any budget</option><option value="1">Up to PKR 1 crore</option><option value="2">PKR 1 to 3 crore</option><option value="3">Above PKR 3 crore</option></select></label>
+    </form>
+    <p class="lcount" id="lcount" aria-live="polite"></p>
+    <div class="lgrid" id="lgrid"></div>
+    <p class="lempty" id="lempty" hidden>No listings match these filters. <a href="https://wa.me/923008497062?text=Assalam%20o%20Alaikum%2C%20Bukhsh%20Estate%20%26%20Marketing%2C%20mujhe%20DHA%20Lahore%20property%20ke%20baare%20mein%20baat%20karni%20hai.">Message us on WhatsApp</a> and we will search for you.</p>
+    <dialog id="ldlg" class="ldlg" aria-labelledby="ldtitle">
+      <form method="dialog"><button class="lx" aria-label="Close">&times;</button></form>
+      <div class="ldimg" id="ldimg" role="img" aria-label="Sample property photo"></div>
+      <h3 id="ldtitle"></h3>
+      <dl class="ldfacts" id="ldfacts"></dl>
+      <p class="ldnote">Sample listing for design. Live details, price and availability to be confirmed by the agency.</p>
+      <a class="btn" id="ldwa" href="https://wa.me/923008497062?text=Assalam%20o%20Alaikum%2C%20Bukhsh%20Estate%20%26%20Marketing%2C%20mujhe%20DHA%20Lahore%20property%20ke%20baare%20mein%20baat%20karni%20hai.">Enquire on WhatsApp</a>
+    </dialog>
+  </section>
+
+  <div class="scene" id="levels">
+    <div class="pin">
+      <div class="stage">
+        <div class="info">
+          <p class="eyebrow" id="lvNum">Six ways we help</p>
+          <div class="info-body">
+            <h2 id="lvName">Reliable. Transparent. Value-led.</h2>
+            <p id="lvDesc">Scroll on and each service opens up in turn.</p>
+          </div>
+          <div class="ticks" id="ticks"></div>
+        </div>
+        <div class="view" id="view"><div class="rig" id="rig"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="band">
+    <h2>Bukhsh Estate &amp; Marketing, at a glance</h2>
+    <div class="nums">
+      <div><b data-to="300">0</b><span>Properties listed for sale</span></div>
+      <div><b data-to="3">0</b><span>Property types: plots, houses, commercial</span></div>
+      <div><b data-to="1">0</b><span>DHA registered dealer, R.P. 5/040</span></div>
+          </div>
+  </section>
+
+  <section class="model" aria-label="3D building model">
+    <p class="kick">VIP tower · 3D</p>
+    <h2>Drag to <em>explore.</em></h2>
+    <p class="d">A VIP glass and gold tower with a penthouse terrace and rooftop pool. Drag it, or focus it and use the arrow keys. Sample model for design, not a real project.</p>
+    <div class="model-stage">
+      <canvas id="gl" aria-label="Rotatable 3D model of a sample VIP glass and gold tower"></canvas>
+      <div class="model-fb" role="img" aria-label="3D model unavailable on this device">3D model unavailable on this device</div>
+    </div>
+    <p class="model-cap">Sample model. Photos and details are for design only.</p>
+  </section>
+
+  <section class="promise" id="about" aria-label="Our promise">
+    <div><h3>Building trust</h3><p class="d">Reliable and transparent dealing, from the first call to the completion.</p></div>
+    <div><h3>Creating value</h3><p class="d">Value-led advice for residential and investment needs.</p></div>
+    <div><h3>Delivering excellence</h3><p class="d">Experienced estate agents. DHA registered dealer, R.P. 5/040, serving DHA Lahore from Phase 4.</p></div>
+  </section>
+
+  <section class="drift">
+    <div class="sec">
+      <h2>How we can help</h2>
+      <p>Residential and investment needs, handled by experienced property professionals.</p>
+    </div>
+    <div class="grid">
+      <article class="tile" data-speed="-6"><div class="pic" role="img" aria-label="Bright living room of a modern home" style="background-image:url(https://images.unsplash.com/photo-1705326701287-346fc37a2c86?auto=format&fit=crop&w=1600&q=80)"></div><p class="k">Residential</p><h3>Homes for your family</h3><p class="d">Tell us your budget and area. We shortlist, you visit, and we guide you through completion.</p></article>
+      <article class="tile" data-speed="10"><div class="pic" role="img" aria-label="Bedroom of a modern home with a large window" style="background-image:url(https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1600&q=80)"></div><p class="k">Buy, sell, let</p><h3>Clear and honest dealing</h3><p class="d">Reliable, transparent and value-led service from the first call to the completion.</p></article>
+      <article class="tile" data-speed="-10"><div class="pic" role="img" aria-label="Aerial view over a city neighbourhood at sunset" style="background-image:url(https://images.unsplash.com/photo-1769298084996-8ed5d3a72870?auto=format&fit=crop&w=1600&q=80)"></div><p class="k">Where we work</p><h3>DHA Lahore</h3><p class="d">Our office: 145-CCA, DD, Phase 4, DHA Lahore. We focus on DHA and prime areas of Lahore.</p></article>
+    </div>
+  </section>
+
+  <section class="end" id="visit">
+    <img class="logo-lg" src="assets/bukhsh_logo.jpg" alt="Bukhsh Estate &amp; Marketing logo" width="112" height="112">
+    <h2>Your trust, <em>our commitment.</em></h2>
+    <a class="btn" href="https://wa.me/923008497062?text=Assalam%20o%20Alaikum%2C%20Bukhsh%20Estate%20%26%20Marketing%2C%20mujhe%20DHA%20Lahore%20property%20ke%20baare%20mein%20baat%20karni%20hai.">Message on WhatsApp</a>
+    <small>DHA R.P. 5/040 · 145-CCA, DD, Phase 4, DHA Lahore<br>WhatsApp 0300 8497062<br>Design preview made for Bukhsh Estate &amp; Marketing. Photos: Unsplash (Pipcke, Ali Moradi, Alexander Gluschenko).</small>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  /* SAMPLE LISTINGS for layout only. Replace with real stock (photos, price, area, phase, status) before going live. */
+  var WA = 'https://wa.me/923008497062?text=';
+  var data = [
+    { id: 'S1', purpose: 'Sale', type: 'House', area: '5 Marla', phase: 'Phase 4', title: '5 Marla house, DHA Phase 4', img: 'https://images.unsplash.com/photo-1705326701287-346fc37a2c86?auto=format&fit=crop&w=1600&q=80', price: null },
+    { id: 'S2', purpose: 'Sale', type: 'Residential plot', area: '10 Marla', phase: 'Phase 6', title: '10 Marla residential plot, DHA Phase 6', img: 'https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1600&q=80', price: null },
+    { id: 'S3', purpose: 'Sale', type: 'Commercial plot', area: '1 Kanal', phase: 'Phase 4', title: '1 Kanal commercial plot, DHA Phase 4', img: 'https://images.unsplash.com/photo-1769298084996-8ed5d3a72870?auto=format&fit=crop&w=1600&q=80', price: null },
+    { id: 'S4', purpose: 'Rent', type: 'House', area: '10 Marla', phase: 'Phase 4', title: '10 Marla house for rent, DHA Phase 4', img: 'https://images.unsplash.com/photo-1705326701287-346fc37a2c86?auto=format&fit=crop&w=1600&q=80', price: null },
+    { id: 'S5', purpose: 'Sale', type: 'Building', area: '1 Kanal', phase: 'Phase 6', title: 'Commercial building, DHA Phase 6', img: 'https://images.unsplash.com/photo-1644057501622-dfa7dd26dbfb?auto=format&fit=crop&w=1600&q=80', price: null },
+    { id: 'S6', purpose: 'Sale', type: 'Residential plot', area: '5 Marla', phase: 'Phase 10', title: '5 Marla residential plot, DHA Phase 10', img: 'https://images.unsplash.com/photo-1769298084996-8ed5d3a72870?auto=format&fit=crop&w=1600&q=80', price: null }
+  ];
+
+  var form = document.getElementById('lfilter');
+  var grid = document.getElementById('lgrid');
+  var countEl = document.getElementById('lcount');
+  var emptyEl = document.getElementById('lempty');
+  var dlg = document.getElementById('ldlg');
+  if (!form || !grid || !dlg) return;
+
+  function val(name) { return form.elements[name].value; }
+
+  /* Budget filter: a listing with no confirmed price is kept, so visitors still see it. */
+  function budgetOk(d, b) {
+    if (b === 'any' || d.price === null) return true;
+    if (b === '1') return d.price <= 10000000;
+    if (b === '2') return d.price > 10000000 && d.price <= 30000000;
+    return d.price > 30000000;
+  }
+
+  function matches(d) {
+    var p = val('purpose'), t = val('type'), a = val('area'), ph = val('phase'), b = val('budget');
+    if (p !== 'any' && d.purpose !== p) return false;
+    if (t !== 'any' && d.type !== t) return false;
+    if (a !== 'any' && d.area !== a) return false;
+    if (ph !== 'any' && d.phase !== ph) return false;
+    return budgetOk(d, b);
+  }
+
+  function card(d) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'lcard';
+    b.setAttribute('aria-label', d.title + ' (sample listing). Open details.');
+    b.innerHTML =
+      '<span class="lpic" style="background-image:url(\'' + d.img + '\')"></span>' +
+      '<span class="lbody">' +
+        '<span class="ltag">' + (d.purpose === 'Rent' ? 'To rent' : 'For sale') + ' · Sample</span>' +
+        '<strong>' + d.title + '</strong>' +
+        '<span class="lmeta">' + d.area + ' · ' + d.phase + '</span>' +
+        '<span class="lprice">' + (d.price ? d.price : 'Price on request') + '</span>' +
+      '</span>';
+    b.addEventListener('click', function () { openDetail(d); });
+    return b;
+  }
+
+  function render() {
+    grid.innerHTML = '';
+    var list = data.filter(matches);
+    list.forEach(function (d) { grid.appendChild(card(d)); });
+    countEl.textContent = list.length + (list.length === 1 ? ' sample listing' : ' sample listings') + ' shown';
+    emptyEl.hidden = list.length > 0;
+  }
+
+  function openDetail(d) {
+    document.getElementById('ldimg').style.backgroundImage = 'url(\'' + d.img + '\')';
+    document.getElementById('ldtitle').textContent = d.title;
+    document.getElementById('ldfacts').innerHTML =
+      '<dt>Purpose</dt><dd>' + (d.purpose === 'Rent' ? 'To rent' : 'For sale') + '</dd>' +
+      '<dt>Type</dt><dd>' + d.type + '</dd>' +
+      '<dt>Area</dt><dd>' + d.area + '</dd>' +
+      '<dt>Phase</dt><dd>' + d.phase + '</dd>' +
+      '<dt>Price</dt><dd>' + (d.price ? d.price : 'On request') + '</dd>';
+    var msg = 'Assalam o Alaikum, Bukhsh Estate &amp; Marketing, mujhe ye property dekhni hai: ' + d.title + ' (ref ' + d.id + ')';
+    document.getElementById('ldwa').href = WA + encodeURIComponent(msg);
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+
+  form.addEventListener('change', render);
+
+  /* Header and band links: Buy and Rent pre-select the purpose filter */
+  document.querySelectorAll('[data-purpose]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      form.elements.purpose.value = a.getAttribute('data-purpose');
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+<script>
+(function () {
+  var sec = document.querySelector('.model');
+  var cvs = document.getElementById('gl');
+  if (!sec || !cvs) return;
+  function fail() { sec.classList.add('no3d'); }
+  if (!window.THREE) { fail(); return; }
+  var renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas: cvs, antialias: true, alpha: true }); } catch (e) { fail(); return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
+  camera.position.set(0, 6.5, 27);
+  camera.lookAt(0, 6.0, 0);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.45));
+  var key = new THREE.DirectionalLight(0xfff1d6, 1.15); key.position.set(7, 14, 9); scene.add(key);
+  var fill = new THREE.DirectionalLight(0x9fb8c8, 0.35); fill.position.set(-9, 5, -6); scene.add(fill);
+  var rim = new THREE.PointLight(0xd9ad54, 1.7, 45); rim.position.set(-9, 8, -5); scene.add(rim);
+
+  var gold = 0xd9ad54, base = 0.6;
+  var group = new THREE.Group(); scene.add(group);
+
+  var glass = new THREE.MeshStandardMaterial({ color: 0x25363f, metalness: 0.8, roughness: 0.08, transparent: true, opacity: 0.66 });
+  var stone = new THREE.MeshStandardMaterial({ color: 0xd9cdb4, roughness: 0.75, metalness: 0.02 });
+  var goldMat = new THREE.MeshStandardMaterial({ color: gold, metalness: 1, roughness: 0.24 });
+  var edgeMat = new THREE.LineBasicMaterial({ color: gold, transparent: true, opacity: 0.9 });
+  var water = new THREE.MeshStandardMaterial({ color: 0x4fc3dc, metalness: 0.2, roughness: 0.05, emissive: 0x08404f, emissiveIntensity: 0.6 });
+
+  function part(geo, mat, x, y, z, outline) {
+    var m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); group.add(m);
+    if (outline !== false) {
+      var e = new THREE.LineSegments(new THREE.EdgesGeometry(geo), edgeMat);
+      e.position.set(x, y, z); group.add(e);
+    }
+    return m;
+  }
+
+  /* Ground: dark plaza with a fine gold ring */
+  var ground = new THREE.Mesh(new THREE.CylinderGeometry(7.6, 7.9, 0.25, 72), new THREE.MeshStandardMaterial({ color: 0x17120a, roughness: 0.9 }));
+  ground.position.y = base - 0.125; scene.add(ground);
+  var ring = new THREE.Mesh(new THREE.TorusGeometry(7.3, 0.025, 8, 120), goldMat);
+  ring.rotation.x = Math.PI / 2; ring.position.y = base + 0.01; scene.add(ring);
+
+  /* Limestone podium with a gold plinth line */
+  part(new THREE.BoxGeometry(8.6, 0.9, 8.6), stone, 0, base + 0.45, 0);
+  part(new THREE.BoxGeometry(8.8, 0.06, 8.8), goldMat, 0, base + 0.93, 0, false);
+
+  /* Tower: six glass floors, top two set back, gold slab and mullions on every floor */
+  var y = base + 0.99, fh = 0.95, gap = 0.1;
+  for (var i = 0; i < 6; i++) {
+    var w = i < 4 ? 6.2 : 4.8;
+    var cy = y + fh / 2;
+    part(new THREE.BoxGeometry(w, fh, w), glass, 0, cy, 0);
+    part(new THREE.BoxGeometry(w + 0.14, 0.07, w + 0.14), goldMat, 0, y - 0.03, 0, false);
+    for (var k = -1; k <= 1; k += 2) {
+      part(new THREE.BoxGeometry(0.04, fh, 0.04), goldMat, k * w / 4, cy, w / 2 + 0.01, false);
+      part(new THREE.BoxGeometry(0.04, fh, 0.04), goldMat, w / 2 + 0.01, cy, k * w / 4, false);
+    }
+    y += fh + gap;
+  }
+
+  /* Penthouse terrace: stone deck, rooftop pool, gold pergola */
+  var roof = y;
+  part(new THREE.BoxGeometry(5.4, 0.12, 5.4), stone, 0, roof + 0.06, 0);
+  part(new THREE.BoxGeometry(3.4, 0.05, 1.7), water, 0, roof + 0.14, -0.9, false);
+  for (var px = -1; px <= 1; px += 2) {
+    for (var pz = -1; pz <= 1; pz += 2) {
+      part(new THREE.CylinderGeometry(0.05, 0.05, 1.4, 12), goldMat, px * 2.2, roof + 0.82, pz * 2.2, false);
+    }
+  }
+  part(new THREE.BoxGeometry(5.0, 0.1, 5.0), goldMat, 0, roof + 1.56, 0);
+
+  /* Crown: tapered gold spire with a light at the tip */
+  part(new THREE.CylinderGeometry(0.02, 0.09, 1.8, 10), goldMat, 0, roof + 2.5, 0, false);
+  part(new THREE.SphereGeometry(0.12, 16, 16), goldMat, 0, roof + 3.5, 0, false);
+
+  function size() {
+    var r = cvs.getBoundingClientRect();
+    var W = Math.max(1, r.width), H = Math.max(1, r.height);
+    renderer.setSize(W, H, false);
+    camera.aspect = W / H; camera.fov = camera.aspect < 0.9 ? 46 : 32; camera.updateProjectionMatrix();
+  }
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var base2 = reduce ? 0 : 0.0035;
+  var rot = 0.5, speed = base2, dragging = false, lastX = 0, visible = true, raf = 0;
+  function frame() {
+    raf = 0;
+    if (!dragging) { speed += (base2 - speed) * 0.02; rot += speed; }
+    group.rotation.y = rot;
+    try { renderer.render(scene, camera); } catch (e) { fail(); return; }
+    if (visible) raf = requestAnimationFrame(frame);
+  }
+  function kick() { if (!raf && visible) raf = requestAnimationFrame(frame); }
+
+  var stage = cvs.parentNode;
+  cvs.setAttribute('tabindex', '0');
+  cvs.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { speed = -0.06; kick(); e.preventDefault(); }
+    else if (e.key === 'ArrowRight') { speed = 0.06; kick(); e.preventDefault(); }
+  });
+  stage.addEventListener('pointerdown', function (e) { dragging = true; lastX = e.clientX; kick(); });
+  window.addEventListener('pointermove', function (e) {
+    if (!dragging) return;
+    var dx = e.clientX - lastX; lastX = e.clientX; speed = dx * 0.012; rot += speed; kick();
+  });
+  function stop() { dragging = false; }
+  window.addEventListener('pointerup', stop);
+  window.addEventListener('pointercancel', stop);
+  window.addEventListener('resize', function () { size(); kick(); });
+  size();
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      visible = es[0].isIntersecting; if (visible) kick();
+    }, { rootMargin: '200px 0px' }).observe(sec);
+  }
+  frame();
+})();
+</script>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) document.documentElement.classList.add('calm');
+  function $(s) { return document.querySelector(s); }
+  function clamp(x, a, b) { return Math.max(a === undefined ? 0 : a, Math.min(b === undefined ? 1 : b, x)); }
+  function smooth(x, a, b) { var t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); }
+
+  var R = {};
+  document.querySelectorAll('[data-r]').forEach(function (el) { R[el.dataset.r] = el; });
+
+  /* Tower */
+  var LV = [
+    { n: 'Service 01', t: 'Buying', d: 'Tell us what you need and your budget. We find the right property for you.', c: '#6b5a3a' },
+    { n: 'Service 02', t: 'Selling', d: 'We help you sell your property at a fair value, with clear and honest dealing.', c: '#8a6f3c' },
+    { n: 'Service 03', t: 'Lettings', d: 'Looking for a place to rent, or a tenant for yours? We handle both sides.', c: '#a88444' },
+    { n: 'Service 04', t: 'Commercial property', d: 'Shops, commercial plots and offices for business and long-term investment.', c: '#c29a4c' },
+    { n: 'Service 05', t: 'Residential needs', d: 'Homes that fit your family, in the area that fits your life.', c: '#e0b45c' },
+    { n: 'Service 06', t: 'DHA Phase 4 and prime Lahore', d: 'Our office is in DHA Phase 4, with listings across DHA and prime areas of Lahore.', c: '#d9ad54' }
+  ];
+  var rig = $('#rig'), floors = [], ticks = $('#ticks');
+  var W = 240, WH = 30, SL = 6;
+
+  /* One box: top + four sides. z defaults to the top of the floor slab. */
+  function box(parent, o) {
+    var b = document.createElement('div');
+    b.className = 'bx ' + (o.k || '');
+    b.style.cssText = '--x:' + o.x + 'px;--y:' + o.y + 'px;--z:' + (o.z === undefined || o.z === null ? SL : o.z) + 'px;--w:' + o.w + 'px;--d:' + o.d + 'px;--h:' + o.h + 'px;--bc:' + (o.c || '#888');
+    ['t', 'f', 'l'].forEach(function (k) { var i = document.createElement('i'); i.className = k; b.appendChild(i); });
+    parent.appendChild(b);
+    return b;
+  }
+  /* Compact list: [x, y, w, d, h, colour, class, z] */
+  function put(parent, list) {
+    list.forEach(function (a) { box(parent, { x: a[0], y: a[1], w: a[2], d: a[3], h: a[4], c: a[5], k: a[6], z: a[7] }); });
+  }
+  var FULL = [[0, 0, 240, 3], [0, 237, 240, 3], [0, 0, 3, 240], [237, 0, 3, 240]];
+  var CAN = 20; /* z of a plant canopy above a planter */
+
+  var PLAN = [
+    { mat: 'm-marble', walls: FULL, items: [ /* L1 arrival lobby */
+      [136, 128, 96, 100, 1, '#5a4a2c'],
+      [28, 36, 112, 22, 16, '#2a2316'], [28, 36, 112, 3, 19, '#c9a96a'],
+      [142, 196, 80, 24, 12, '#8a6f55'], [200, 134, 24, 60, 12, '#8a6f55'], [156, 152, 34, 30, 6, '#e3ddd0'],
+      [58, 112, 10, 10, 30, '#ebe7df'], [58, 176, 10, 10, 30, '#ebe7df'], [110, 92, 10, 10, 30, '#ebe7df'],
+      [16, 196, 20, 20, 14, '#3b6f48'], [20, 200, 12, 12, 16, '#62b06c', '', CAN],
+      [206, 18, 20, 20, 14, '#3b6f48'], [210, 22, 12, 12, 16, '#62b06c', '', CAN]
+    ] },
+    { mat: 'm-dark', walls: FULL, items: [ /* L2 cinema and cafe */
+      [20, 16, 200, 5, 30, '#100c06', 'screen'],
+      [30, 62, 180, 20, 10, '#7a2536', 'seats'], [30, 92, 180, 20, 12, '#7a2536', 'seats'], [30, 122, 180, 20, 14, '#7a2536', 'seats'],
+      [20, 190, 96, 22, 18, '#d8c7a8'], [20, 190, 96, 3, 21, '#8a6a3a'],
+      [124, 196, 12, 12, 12, '#1b1b1b'], [144, 196, 12, 12, 12, '#1b1b1b'], [164, 196, 12, 12, 12, '#1b1b1b'],
+      [184, 176, 22, 22, 10, '#efe3cb'], [208, 202, 22, 22, 10, '#efe3cb']
+    ] },
+    { mat: 'm-stone', walls: FULL, items: [ /* L3 wellness club */
+      [14, 14, 212, 64, 3, '#4fd0e8', 'pool lanes'],
+      [26, 100, 16, 36, 8, '#f4ecdc'], [52, 100, 16, 36, 8, '#f4ecdc'], [78, 100, 16, 36, 8, '#f4ecdc'], [104, 100, 16, 36, 8, '#f4ecdc'],
+      [146, 104, 18, 44, 14, '#2a241a'], [170, 104, 18, 44, 14, '#2a241a'], [194, 104, 18, 44, 14, '#2a241a'],
+      [150, 166, 40, 14, 8, '#2a241a'],
+      [140, 186, 86, 44, 26, '#cfe7ef', 'glass'], [150, 202, 60, 14, 8, '#c9a67a'],
+      [16, 176, 22, 22, 16, '#3b6f48'], [21, 181, 12, 12, 16, '#62b06c', '', CAN]
+    ] },
+    { mat: 'm-wood', walls: FULL, items: [ /* L4 city residences */
+      [100, 6, 4, 150, 22, '#efebe4'], [100, 152, 134, 4, 22, '#efebe4'],
+      [18, 28, 76, 76, 1, '#c9bfae'], [24, 30, 60, 64, 10, '#f6f2ea'], [24, 26, 60, 6, 22, '#5a4838'],
+      [28, 36, 22, 12, 5, '#ffffff', '', 16], [58, 36, 22, 12, 5, '#ffffff', '', 16], [12, 34, 9, 10, 8, '#5a4838'], [88, 34, 9, 10, 8, '#5a4838'],
+      [112, 30, 112, 88, 1, '#6b5a3a'], [124, 36, 76, 26, 12, '#8a7a5a'], [136, 78, 40, 24, 6, '#e8e2d6'], [220, 40, 12, 70, 14, '#222'],
+      [28, 176, 86, 26, 14, '#ece8e0'], [16, 210, 208, 18, 14, '#c9c3b8'],
+      [40, 164, 10, 10, 12, '#222'], [64, 164, 10, 10, 12, '#222'], [88, 164, 10, 10, 12, '#222'],
+      [140, 170, 60, 36, 10, '#8b6b4b'], [150, 160, 10, 8, 10, '#2a2a2a'], [174, 160, 10, 8, 10, '#2a2a2a'], [150, 208, 10, 8, 10, '#2a2a2a'], [174, 208, 10, 8, 10, '#2a2a2a']
+    ] },
+    { mat: 'm-wood', walls: FULL, items: [ /* L5 sky residences */
+      [112, 6, 4, 110, 22, '#efebe4'], [112, 112, 126, 4, 22, '#efebe4'],
+      [14, 20, 92, 92, 1, '#cfc4b2'], [22, 24, 70, 70, 10, '#f6f2ea'], [22, 20, 70, 6, 22, '#4a3a2e'],
+      [28, 30, 24, 12, 5, '#ffffff', '', 16], [62, 30, 24, 12, 5, '#ffffff', '', 16],
+      [124, 20, 104, 92, 1, '#6b5538'], [132, 26, 82, 28, 12, '#9a845a'], [190, 54, 24, 54, 12, '#9a845a'], [140, 70, 34, 28, 6, '#e8e2d6'],
+      [30, 150, 100, 32, 10, '#8b6b4b'],
+      [40, 140, 10, 8, 10, '#2a2a2a'], [70, 140, 10, 8, 10, '#2a2a2a'], [100, 140, 10, 8, 10, '#2a2a2a'],
+      [40, 186, 10, 8, 10, '#2a2a2a'], [70, 186, 10, 8, 10, '#2a2a2a'], [100, 186, 10, 8, 10, '#2a2a2a'],
+      [150, 150, 74, 24, 14, '#ece8e0'], [150, 206, 74, 20, 14, '#c9c3b8']
+    ] },
+    { mat: 'm-wood', walls: [[0, 0, 150, 3], [0, 237, 150, 3], [0, 0, 3, 240], [147, 0, 3, 90], [147, 130, 3, 110], /* L6 penthouse and sky terrace */
+        [237, 0, 3, 240, 14], [150, 0, 87, 3, 14], [150, 237, 87, 3, 14]], items: [
+      [150, 4, 86, 232, 1, '#a07650', 'deck'],
+      [14, 16, 120, 110, 1, '#4a3d24'], [22, 26, 90, 30, 12, '#cdbba0'], [104, 56, 28, 60, 12, '#cdbba0'], [40, 70, 50, 30, 6, '#2a2a2a'],
+      [20, 150, 70, 76, 10, '#f6f2ea'], [20, 146, 70, 6, 24, '#3a2e26'], [26, 156, 24, 12, 5, '#ffffff', '', 16], [58, 156, 24, 12, 5, '#ffffff', '', 16],
+      [104, 168, 36, 56, 16, '#1d1d1d'], [92, 176, 10, 10, 12, '#c8a064'], [92, 196, 10, 10, 12, '#c8a064'], [92, 214, 10, 10, 12, '#c8a064'],
+      [160, 18, 66, 64, 3, '#4fd0e8', 'pool'],
+      [164, 104, 16, 36, 8, '#f4ecdc'], [188, 104, 16, 36, 8, '#f4ecdc'], [212, 104, 16, 36, 8, '#f4ecdc'],
+      [160, 160, 36, 36, 10, '#8b6b4b'],
+      [208, 160, 24, 24, 14, '#3b6f48'], [212, 164, 16, 16, 16, '#62b06c', '', CAN],
+      [208, 196, 24, 24, 14, '#3b6f48'], [212, 200, 16, 16, 16, '#62b06c', '', CAN]
+    ] }
+  ];
+
+  LV.forEach(function (l, i) {
+    var f = document.createElement('div'); f.className = 'floor'; f.style.setProperty('--fc', l.c);
+    var P = PLAN[i];
+    box(f, { x: 0, y: 0, w: W, d: W, h: SL, z: 0, c: l.c, k: 'slab ' + P.mat });
+    P.walls.forEach(function (w) { box(f, { x: w[0], y: w[1], w: w[2], d: w[3], h: w[4] || WH, c: '#cfe6f2', k: 'glass' }); });
+    put(f, P.items);
+    rig.appendChild(f); floors.push(f);
+    var t = document.createElement('i'); ticks.appendChild(t);
+  });
+  var tickEls = ticks.children, lastA = -2;
+
+  /* Penthouse roof: copper frame with a glass centre, and a slatted pergola over the terrace. It lowers onto the level. */
+  var roof = document.createElement('div'); roof.className = 'roof';
+  put(roof, [
+    [0, 0, 150, 6, 4, '#d9ad54', 'copper', 36], [0, 234, 150, 6, 4, '#d9ad54', 'copper', 36],
+    [0, 0, 6, 240, 4, '#d9ad54', 'copper', 36], [144, 0, 6, 240, 4, '#d9ad54', 'copper', 36],
+    [6, 6, 138, 228, 2, '#cfe6f2', 'glass skylight', 36],
+    [152, 2, 5, 5, 30, '#d9ad54', 'copper'], [228, 2, 5, 5, 30, '#d9ad54', 'copper'],
+    [152, 232, 5, 5, 30, '#d9ad54', 'copper'], [228, 232, 5, 5, 30, '#d9ad54', 'copper'],
+    [152, 2, 7, 236, 3, '#d9ad54', 'copper', 36], [171, 2, 7, 236, 3, '#d9ad54', 'copper', 36],
+    [190, 2, 7, 236, 3, '#d9ad54', 'copper', 36], [209, 2, 7, 236, 3, '#d9ad54', 'copper', 36], [228, 2, 7, 236, 3, '#d9ad54', 'copper', 36]
+  ]);
+  floors[floors.length - 1].appendChild(roof);
+
+  function prog(el) {
+    var r = el.getBoundingClientRect(), total = r.height - window.innerHeight;
+    return total > 0 ? clamp(-r.top / total) : 0;
+  }
+  var hero = $('#hero'), view = $('#view');
+  var nums = document.querySelectorAll('[data-to]'), tiles = document.querySelectorAll('[data-speed]');
+
+  function fmt(v, sep) { return sep ? v.toLocaleString('en-US') : String(v); }
+
+  function update() {
+    var vh = window.innerHeight;
+    var doc = document.documentElement.scrollHeight - vh;
+    $('#bar').style.width = (doc > 0 ? window.scrollY / doc * 100 : 0) + '%';
+
+    /* Scene 1 */
+    var p = reduce ? 0 : prog(hero);
+    R.c1.style.transform = 'translate3d(0,' + (-p * 26) + 'vh,0) scale(' + (1 + p * .3) + ')';
+    R.c1.style.opacity = reduce ? 1 : 1 - smooth(p, .08, .34);
+    var c2 = reduce ? 1 : smooth(p, .42, .62) * (1 - smooth(p, .86, .97));
+    R.c2.style.opacity = c2;
+    R.c2.style.transform = 'translate3d(0,' + ((1 - smooth(p, .42, .7)) * 8) + 'vh,0)';
+    R.cue.style.opacity = 1 - smooth(p, 0, .08);
+    R.veil.style.opacity = smooth(p, .9, 1);
+    if (reduce) { R.c2.style.position = 'relative'; R.c2.style.padding = '60px 20px'; }
+
+
+    /* Counters */
+    nums.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      var t = reduce ? 1 : smooth((vh * .95 - r.top) / (vh * .5), 0, 1);
+      var txt = fmt(Math.round(+el.dataset.to * t), el.dataset.sep);
+      if (el._v !== txt) { el._v = txt; el.textContent = txt; }
+    });
+
+    /* Drifting tiles */
+    tiles.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      var c = r.top + r.height / 2 - vh / 2;
+      var sp = +el.dataset.speed;
+      el.style.transform = reduce ? '' : 'translate3d(0,' + (c * sp / 150).toFixed(1) + 'px,0)';
+    });
+  }
+
+  /* Scene 2: GSAP + ScrollTrigger. One scrubbed timeline separates the tower,
+     then each level takes its turn: it slides out sideways, its text slides in, it slides back. */
+  var S = { e: 0, rz: -48, pr: 0 }, X = {};
+  floors.forEach(function (f, i) { X['x' + i] = 0; });
+
+  function setActive(a) {
+    if (a === lastA) return;
+    lastA = a;
+    $('#lvNum').textContent = a < 0 ? 'Six ways we help' : LV[a].n;
+    $('#lvName').textContent = a < 0 ? 'Reliable. Transparent. Value-led.' : LV[a].t;
+    $('#lvDesc').textContent = a < 0 ? 'Scroll on and each service opens up in turn.' : LV[a].d;
+    floors.forEach(function (f, i) { f.classList.toggle('on', i === a); });
+    for (var i = 0; i < tickEls.length; i++) tickEls[i].classList.toggle('on', i === a);
+    if (window.gsap && !reduce) {
+      gsap.fromTo(['#lvNum', '#lvName', '#lvDesc'], { y: 26, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: .55, stagger: .08, ease: 'power3.out', overwrite: true });
+    }
+  }
+
+  var SC = 1, SLIDE = 150;
+  function measure() {
+    var vr = view.getBoundingClientRect();
+    SC = clamp(Math.min(vr.width / 520, vr.height / 700), .35, 1.2);
+    SLIDE = window.innerWidth > 860 ? 150 : 30;
+  }
+
+  function renderTower() {
+    var sc = SC;
+    var pitch = 36 + 66 * S.e, top = 5 * pitch / 2;
+    /* The roof is hidden until its turn, then lowers onto the level */
+    roof.style.transform = 'translateZ(' + ((1 - S.pr) * 90) + 'px)';
+    roof.style.visibility = S.pr > .01 ? 'visible' : 'hidden';
+    rig.style.transform = 'translateY(' + (top * .85 * sc + 20) + 'px) scale(' + sc + ') rotateX(58deg) rotateZ(' + S.rz + 'deg)';
+    floors.forEach(function (f, i) {
+      f.style.transform = 'translateZ(' + (i * pitch) + 'px) translateX(' + X['x' + i] + 'px)';
+    });
+  }
+
+  if (reduce || !window.gsap || !window.ScrollTrigger) {
+    S.e = 1; S.rz = -12; S.pr = 1; setActive(5);
+  } else {
+    gsap.registerPlugin(ScrollTrigger);
+    var tl = gsap.timeline({
+      defaults: { ease: 'none' },
+      scrollTrigger: { trigger: '#levels', start: 'top top', end: 'bottom bottom', scrub: .7 },
+      onUpdate: function () {
+        var q = tl.progress();
+        setActive(q < .3 ? -1 : Math.min(5, Math.floor((q - .3) / .7 * 6)));
+        renderTower();
+      }
+    });
+    tl.to(S, { e: 1, duration: .3, ease: 'power2.out' }, 0);
+    tl.to(S, { rz: -12, duration: 1 }, 0);
+    /* Last level: the penthouse roof lowers onto the level as it takes its turn */
+    tl.to(S, { pr: 1, duration: .08, ease: 'power3.out' }, .3 + 5 * (.7 / 6) + .01);
+    var seg = .7 / 6;
+    LV.forEach(function (l, i) {
+      var t0 = .3 + i * seg, to = {}, back = {};
+      to['x' + i] = function () { return -SLIDE; }; back['x' + i] = 0;
+      tl.to(X, Object.assign({ duration: .04, ease: 'power2.out' }, to), t0);
+      tl.to(X, Object.assign({ duration: .04, ease: 'power2.inOut' }, back), t0 + seg - .05);
+    });
+    window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+  }
+
+  measure(); renderTower();
+  window.addEventListener('resize', function () { measure(); renderTower(); });
+  if ('IntersectionObserver' in window) {
+    /* Keep the 3D tower out of the page while it is far off screen, so it costs nothing */
+    new IntersectionObserver(function (es) {
+      es.forEach(function (e) { rig.style.display = e.isIntersecting ? '' : 'none'; });
+    }, { rootMargin: '400px 0px' }).observe(document.getElementById('levels'));
+  }
+
+  /* Hero video: autoplay, muted, looping. GSAP scrubs a slow zoom-out as you scroll the hero. */
+  var hv = document.getElementById('hvid');
+  if (hv) {
+    hv.muted = true;
+    if (reduce) {
+      hv.pause();
+    } else {
+      var pr = hv.play();
+      if (pr && pr.catch) pr.catch(function () {});
+      if (window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(hv, { scale: 1.45 }, {
+          scale: 1, ease: 'none',
+          scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom bottom', scrub: 1.2 }
+        });
+      }
+    }
+  }
+
+  var queued = false;
+  function tick() { queued = false; update(); }
+  function req() { if (!queued) { queued = true; requestAnimationFrame(tick); } }
+  window.addEventListener('scroll', req, { passive: true });
+  window.addEventListener('resize', req);
+  update();
+})();
+</script>
+</body>
+</html>
